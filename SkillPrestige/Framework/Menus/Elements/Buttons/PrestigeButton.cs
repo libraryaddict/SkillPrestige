@@ -62,8 +62,8 @@ namespace SkillPrestige.Framework.Menus.Elements.Buttons
                 int dialogHeight = Game1.tileSize * 6;
 
                 Viewport viewport = Game1.graphics.GraphicsDevice.Viewport;
-                int screenXCenter = (int)(viewport.Width * (1.0 / Game1.options.zoomLevel)) / 2;
-                int screenYCenter = (int)(viewport.Height * (1.0 / Game1.options.zoomLevel)) / 2;
+                int screenXCenter = (int)(viewport.Width * (1 / Game1.options.uiScale)) / 2;
+                int screenYCenter = (int)(viewport.Height * (1 / Game1.options.uiScale)) / 2;
                 int dialogXCenter = (dialogWidth + IClickableMenu.borderWidth * 2) / 2;
                 int dialogYCenter = (dialogHeight + IClickableMenu.borderWidth * 2) / 2;
                 Rectangle bounds = new Rectangle(screenXCenter - dialogXCenter, screenYCenter - dialogYCenter, dialogWidth + IClickableMenu.borderWidth * 2, dialogHeight + IClickableMenu.borderWidth * 2);

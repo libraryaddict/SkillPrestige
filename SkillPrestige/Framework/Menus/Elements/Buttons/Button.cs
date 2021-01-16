@@ -114,7 +114,7 @@ namespace SkillPrestige.Framework.Menus.Elements.Buttons
         /// <param name="pos">The cursor position.</param>
         protected bool ContainsPoint(ICursorPosition pos)
         {
-            return this.ClickableTextureComponent.containsPoint((int)pos.ScreenPixels.X, (int)pos.ScreenPixels.Y);
+            return this.ClickableTextureComponent.containsPoint((int)(pos.ScreenPixels.X * (Game1.options.zoomLevel / Game1.options.uiScale)), (int)(pos.ScreenPixels.Y * (Game1.options.zoomLevel / Game1.options.uiScale)));
         }
     }
 }

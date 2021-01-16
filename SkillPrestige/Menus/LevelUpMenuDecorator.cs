@@ -41,8 +41,8 @@ namespace SkillPrestige.Menus
             get
             {
                 Viewport viewport = Game1.graphics.GraphicsDevice.Viewport;
-                int screenXCenter = (int)(viewport.Width * (1.0 / Game1.options.zoomLevel)) / 2;
-                int screenYCenter = (int)(viewport.Height * (1.0 / Game1.options.zoomLevel)) / 2;
+                int screenXCenter = (int)(viewport.Width * (1 / Game1.options.uiScale)) / 2;
+                int screenYCenter = (int)(viewport.Height * (1 / Game1.options.uiScale)) / 2;
                 int dialogWidth = Game1.tileSize * 10;
                 int dialogHeight = Game1.tileSize * 8;
                 int xLocation = screenXCenter - this.InternalMenu.width / 2;

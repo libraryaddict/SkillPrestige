@@ -143,8 +143,8 @@ namespace SkillPrestige.Framework.Menus
             int menuXCenter = (menuWidth + IClickableMenu.borderWidth * 2) / 2;
             int menuYCenter = (menuHeight + IClickableMenu.borderWidth * 2) / 2;
             Viewport viewport = Game1.graphics.GraphicsDevice.Viewport;
-            int screenXCenter = (int)(viewport.Width * (1.0 / Game1.options.zoomLevel)) / 2;
-            int screenYCenter = (int)(viewport.Height * (1.0 / Game1.options.zoomLevel)) / 2;
+            int screenXCenter = (int)(viewport.Width * (1 / Game1.options.uiScale)) / 2;
+            int screenYCenter = (int)(viewport.Height * (1 / Game1.options.uiScale)) / 2;
             Rectangle bounds = new Rectangle(screenXCenter - menuXCenter, screenYCenter - menuYCenter, menuWidth + IClickableMenu.borderWidth * 2, menuHeight + IClickableMenu.borderWidth * 2);
             Game1.playSound("bigSelect");
             Logger.LogVerbose("Getting currently loaded prestige data...");

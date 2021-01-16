@@ -168,8 +168,8 @@ namespace SkillPrestige.Framework.Menus
             int menuXCenter = (menuWidth + borderWidth * 2) / 2;
             int menuYCenter = (menuHeight + borderWidth * 2) / 2;
             Viewport viewport = Game1.graphics.GraphicsDevice.Viewport;
-            int screenXCenter = (int)(viewport.Width * (1.0 / Game1.options.zoomLevel)) / 2;
-            int screenYCenter = (int)(viewport.Height * (1.0 / Game1.options.zoomLevel)) / 2;
+            int screenXCenter = (int) ((viewport.Width / 2) * (1 / Game1.options.uiScale));
+            int screenYCenter = (int) ((viewport.Height / 2) * (1 / Game1.options.uiScale));
             Rectangle bounds = new Rectangle(screenXCenter - menuXCenter, screenYCenter - menuYCenter,
                 menuWidth + borderWidth * 2, menuHeight + borderWidth * 2);
             Game1.playSound("bigSelect");
